@@ -78,7 +78,7 @@ typedef struct Game{
 	int *revealQueue; // used to reveal nearby tiles upon clicking an empty tile
 	
 	// game state
-	int state; // -2: started, awaiting tile generation on click, -1: game lost, 1: game in progress (?), 2: game won
+	int state;
 	int isPaused;
 }Game;
 

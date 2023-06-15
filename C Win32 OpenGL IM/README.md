@@ -34,6 +34,7 @@
 		- [add comments]
 		- [clean up main]
 	- [ensure function arguments are variable references instead of structs where viable]
+	- [define game states as constants]
 	- [DrawData struct] possibly find better name
 		- [streamline DrawData variables, usage in functions, and utilisation between window operations and game operations]
 		- [avoid sending game data to DrawData struct] only send colour/id data to struct, leave nothing to switch statements for each tile's mask & value etc. (only "value"s no "mask"s should be seen by draw functions)

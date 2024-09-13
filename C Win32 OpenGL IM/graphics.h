@@ -25,11 +25,11 @@ void screenSetup(){ // orthographic projection
 	glLoadIdentity();
 	glOrtho(-1, 1, -1, 1, 0, 10);
 	glMatrixMode(GL_MODELVIEW);
+	glClearColor(1.f, 1.f, 1.f, 1.f);
 }
 
 void screenClear(){
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glClearColor(1.f, 1.f, 1.f, 1.f);
 }
 
 void screenResize(float w, float h){
@@ -41,8 +41,6 @@ void screenResize(float w, float h){
 unsigned int textureSetup(const char *fileName){
 	
 	// fetch data
-	FILE *fp = fopen(fileName, "rb");
-	if(fp == NULL) return 0;
 	int width, height;
 	unsigned char *data = stbi_load(fileName, &width, &height, NULL, 3);
 	

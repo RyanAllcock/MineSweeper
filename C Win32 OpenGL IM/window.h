@@ -40,11 +40,11 @@ void windowCursorPos(WindowHandle *handle, float *cursorX, float *cursorY);
 // window functions
 
 void setupPixelFormat(HDC hdc){
-	static PIXELFORMATDESCRIPTOR pfd={
-		sizeof(PIXELFORMATDESCRIPTOR),1,
-		PFD_DRAW_TO_WINDOW|PFD_SUPPORT_OPENGL|PFD_DOUBLEBUFFER,
-		PFD_TYPE_RGBA,32,0,0,0,0,0,0,0,0,0,0,0,0,0,
-		16,0,0,PFD_MAIN_PLANE,0,0,0,0
+	static PIXELFORMATDESCRIPTOR pfd = {
+		sizeof(PIXELFORMATDESCRIPTOR), 1, 
+		PFD_DRAW_TO_WINDOW | PFD_SUPPORT_OPENGL | PFD_DOUBLEBUFFER, 
+		PFD_TYPE_RGBA, 32,0,0,0,0,0,0,0,0,0,0,0,0,0, 
+		16,0,0, PFD_MAIN_PLANE, 0,0,0,0 
 	};
 	SetPixelFormat(hdc,ChoosePixelFormat(hdc,&pfd),&pfd);
 }
@@ -77,7 +77,7 @@ int windowSetup(WindowHandle *handle, HINSTANCE hInstance, int iCmdShow){
 	wc.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
 	wc.lpszMenuName = NULL;
 	wc.lpszClassName = "CLASS";
-	wc.hIconSm = LoadIcon(NULL,IDI_APPLICATION);
+	wc.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
 	if(!RegisterClassEx(&wc)){
 		MessageBox(NULL, "Window Reg Fail", "Error", MB_ICONEXCLAMATION | MB_OK);
 		return 0;

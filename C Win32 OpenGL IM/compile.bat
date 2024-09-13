@@ -1,0 +1,1 @@
+gcc -Wall -o minesweeper.exe main.c -lopengl32 -lGdi32
